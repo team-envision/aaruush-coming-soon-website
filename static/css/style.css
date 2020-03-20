@@ -1,5 +1,15 @@
 /**
 * =================
+*      FONTS
+* =================
+**/
+@font-face {
+  font-family: "Segoe Mono";
+  src: url("../fonts/segmono_boot.ttf");
+}
+
+/**
+* =================
 *     GLOBALS
 * =================
 **/
@@ -17,6 +27,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  color: #fff;
 }
 
 body {
@@ -27,9 +38,8 @@ body {
 div.container {
   padding: var(--spacing);
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0079d7;
-  overflow: hidden;
 }
 
 /**
@@ -38,8 +48,8 @@ div.container {
 * ========================
 **/
 div#cursor {
-  width: calc(var(--spacing));
-  height: calc(var(--spacing) * 2);
+  width: calc(var(--spacing) * 0.7);
+  height: calc(var(--spacing) * 1.4);
   background-color: #c0c0c0;
   animation: blink 500ms infinite alternate;
 }
@@ -66,5 +76,8 @@ div#cursor {
 **/
 
 div#bsod p {
+  font-family: "Segoe Mono", monospace;
   margin-bottom: var(--spacing);
+  font-size: 1.2rem;
+  padding-right: 20%;
 }
