@@ -17,6 +17,8 @@ The first iteration of the <code>Coming soon</code> landing page of <a href="htt
     <img src="https://img.shields.io/twitter/follow/aaruushsrmist?style=social" alt="Follow us on Twitter"/>
 </p>
 
+![Screenshot](https://github.com/team-envision/aaruush-coming-soon-website/blob/master/Screens/screenshot.png)
+
 ## 🎨 Color reference
 
 | Color    | Hex                                                                |
