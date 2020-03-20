@@ -3,6 +3,8 @@
 *      FONTS
 * =================
 **/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap");
+
 @font-face {
   font-family: "Segoe Mono";
   src: url("../fonts/segmono_boot.ttf");
@@ -35,12 +37,17 @@ body {
   font-size: 16px;
 }
 
-div.container {
+div#container {
   position: relative;
   padding: var(--spacing);
   width: 100vw;
   min-height: 100vh;
   background-color: #0079d7;
+  display: flex;
+}
+
+div#container.white {
+  background-color: #fff;
 }
 
 /**
@@ -53,6 +60,7 @@ div#cursor {
   height: calc(var(--spacing) * 1.4);
   background-color: #c0c0c0;
   animation: blink 500ms infinite alternate;
+  display: none;
 }
 
 @keyframes blink {
@@ -76,6 +84,10 @@ div#cursor {
 * ========================
 **/
 
+div#bsod {
+  display: none;
+}
+
 div#bsod p {
   font-family: "Segoe Mono", monospace;
   margin-bottom: var(--spacing);
@@ -85,7 +97,7 @@ div#bsod p {
 
 /** 
 * ===================================
-*   (Part 3/4) TV Grey Noise Screen
+*   (Part 3/4) TV Noise Grey Screen
 * ===================================
 **/
 canvas#noise-screen {
@@ -94,4 +106,230 @@ canvas#noise-screen {
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
+}
+
+/** 
+* ==============================================
+*   (Part 4/4) Loading + Aaruush is upgrading.
+* ==============================================
+**/
+#aaruush-upgrading-wrapper {
+  text-align: center;
+  display: none;
+  font-family: "Open Sans", sans-serif;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#aaruush-upgrading-wrapper.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#aaruush-upgrading-wrapper .loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: 4500ms linear 0s normal none infinite running;
+  animation-name: rotate;
+}
+
+#aaruush-upgrading-wrapper .loader span::after {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  content: "";
+  display: block;
+  transform-origin: 25px 25px;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#aaruush-upgrading-wrapper h4 {
+  margin-top: calc(var(--spacing) * 2);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#aaruush-logo,
+#team-envision-logo {
+  width: calc(var(--spacing) * 12);
+  height: auto;
+  position: absolute;
+  right: var(--spacing);
+}
+
+#aaruush-logo {
+  top: var(--spacing);
+}
+
+#team-envision-logo {
+  bottom: var(--spacing);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.pip-0::after {
+  transform: rotate(0deg);
+  animation-name: rotate-0;
+  animation-delay: 900ms;
+}
+
+@keyframes rotate-0 {
+  0%,
+  20% {
+    transform: rotate(0deg);
+  }
+  40%,
+  60% {
+    transform: rotate(180deg);
+  }
+  80%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.pip-1::after {
+  transform: rotate(20deg);
+  animation-name: rotate-1;
+  animation-delay: 775ms;
+}
+
+@keyframes rotate-1 {
+  0%,
+  20% {
+    transform: rotate(20deg);
+  }
+  40%,
+  60% {
+    transform: rotate(200deg);
+  }
+  80%,
+  100% {
+    transform: rotate(380deg);
+  }
+}
+.pip-2::after {
+  transform: rotate(40deg);
+  animation-name: rotate-2;
+  animation-delay: 650ms;
+}
+
+@keyframes rotate-2 {
+  0%,
+  20% {
+    transform: rotate(40deg);
+  }
+  40%,
+  60% {
+    transform: rotate(220deg);
+  }
+  80%,
+  100% {
+    transform: rotate(400deg);
+  }
+}
+.pip-3::after {
+  transform: rotate(60deg);
+  animation-name: rotate-3;
+  animation-delay: 525ms;
+}
+
+@keyframes rotate-3 {
+  0%,
+  20% {
+    transform: rotate(60deg);
+  }
+  40%,
+  60% {
+    transform: rotate(240deg);
+  }
+  80%,
+  100% {
+    transform: rotate(420deg);
+  }
+}
+.pip-4::after {
+  transform: rotate(80deg);
+  animation-name: rotate-4;
+  animation-delay: 400ms;
+}
+
+@keyframes rotate-4 {
+  0%,
+  20% {
+    transform: rotate(80deg);
+  }
+  40%,
+  60% {
+    transform: rotate(260deg);
+  }
+  80%,
+  100% {
+    transform: rotate(440deg);
+  }
+}
+.pip-5::after {
+  transform: rotate(100deg);
+  animation-name: rotate-5;
+  animation-delay: 275ms;
+}
+
+@keyframes rotate-5 {
+  0%,
+  20% {
+    transform: rotate(100deg);
+  }
+  40%,
+  60% {
+    transform: rotate(280deg);
+  }
+  80%,
+  100% {
+    transform: rotate(460deg);
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/** 
+* =================
+*   MEDIA QUERIES
+* =================
+**/
+
+@media only screen and (max-width: 767px) {
+  div#container {
+    padding-top: calc(var(--spacing) * 5);
+  }
+
+  div#bsod p {
+    font-size: 1.9vh;
+  }
+
+  #aaruush-logo,
+  #team-envision-logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
