@@ -36,6 +36,7 @@ body {
 }
 
 div.container {
+  position: relative;
   padding: var(--spacing);
   width: 100vw;
   min-height: 100vh;
@@ -80,4 +81,17 @@ div#bsod p {
   margin-bottom: var(--spacing);
   font-size: 1.2rem;
   padding-right: 20%;
+}
+
+/** 
+* ===================================
+*   (Part 3/4) TV Grey Noise Screen
+* ===================================
+**/
+canvas#noise-screen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
