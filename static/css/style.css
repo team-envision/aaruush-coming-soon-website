@@ -161,7 +161,7 @@ canvas#noise-screen {
 
 #aaruush-logo,
 #team-envision-logo {
-  width: calc(var(--spacing) * 12);
+  width: calc(var(--spacing) * 14);
   height: auto;
   position: absolute;
   right: var(--spacing);
@@ -324,7 +324,7 @@ canvas#noise-screen {
   }
 
   div#bsod p {
-    font-size: 1.9vh;
+    font-size: 1.75vh;
   }
 
   #aaruush-logo,
