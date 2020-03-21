@@ -2,6 +2,12 @@
  * Toggle stuff... 🕹
  */
 
+const timings = {
+  part1: 3500,
+  part2: 2800,
+  part3: 1600
+};
+
 var container = document.getElementById("container");
 var cursor = document.getElementById("cursor");
 var bsod = document.getElementById("bsod");
@@ -20,7 +26,7 @@ function initPart1() {
   setTimeout(() => {
     cursor.style.display = "none";
     initPart2();
-  }, 2500);
+  }, timings.part1);
 }
 
 function initPart2() {
@@ -29,7 +35,7 @@ function initPart2() {
   setTimeout(() => {
     bsod.style.display = "none";
     initPart3();
-  }, 1500);
+  }, timings.part2);
 }
 
 function initPart3() {
@@ -40,7 +46,7 @@ function initPart3() {
     noiseScreen.style.display = "none";
     container.classList.toggle("white");
     initPart4();
-  }, 1000);
+  }, timings.part3);
 }
 
 function initPart4() {
@@ -54,8 +60,8 @@ var canvas = document.getElementById("noise-screen"),
   ctx = canvas.getContext("2d");
 
 function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  aaruushUpgradingWrapper.width = window.innerWidth;
+  aaruushUpgradingWrapper.height = window.innerHeight;
 }
 resize();
 window.onresize = resize;
@@ -74,8 +80,6 @@ function noise(ctx) {
 }
 
 var toggle = true;
-
-// added toggle to get 30 FPS instead of 60 FPS
 (function loop() {
   toggle = !toggle;
   if (toggle) {
