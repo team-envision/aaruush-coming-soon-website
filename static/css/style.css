@@ -159,6 +159,25 @@ canvas#noise-screen {
   font-weight: 300;
 }
 
+#aaruush-upgrading-wrapper a {
+  cursor: pointer;
+  margin-top: calc(var(--spacing) * 4);
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  will-change: background-color;
+  text-decoration: none;
+  color: inherit;
+}
+
+#aaruush-upgrading-wrapper a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 #aaruush-logo,
 #team-envision-logo {
   width: calc(var(--spacing) * 14);
