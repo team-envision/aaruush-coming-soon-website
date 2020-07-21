@@ -362,4 +362,9 @@ a.aaruush-contact-us {
     left: 50%;
     transform: translateX(-50%);
   }
+
+  a.aaruush-contact-us {
+    font-size: 0.8rem;
+    bottom: calc(var(--spacing) * 4);
+  }
 }

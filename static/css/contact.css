@@ -88,15 +88,18 @@ div#container div.aaruush-contact-us .tile h3 {
 
 div#container div.aaruush-contact-us .tile div.button-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 div#container div.aaruush-contact-us .tile div.button-row a {
   color: #f06830;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-div#container div.aaruush-contact-us .tile div.button-row a span {
+div#container div.aaruush-contact-us .tile div.button-row a span:first-child {
+  margin-right: 0.5rem;
 }
 
 #aaruush-logo,
