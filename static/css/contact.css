@@ -1,0 +1,135 @@
+/**
+* =================
+*      FONTS
+* =================
+**/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap");
+
+@font-face {
+  font-family: "Segoe Mono";
+  src: url("../fonts/segmono_boot.ttf");
+}
+
+/**
+* =================
+*     GLOBALS
+* =================
+**/
+:root {
+  --spacing: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+}
+
+div#container {
+  position: relative;
+  padding: var(--spacing);
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0079d7;
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+div#container div.aaruush-contact-us {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+div#container div.aaruush-contact-us .tile {
+  margin: 1rem;
+  background-color: #fafafa;
+  border-radius: var(--spacing);
+  padding: calc(var(--spacing) * 2) var(--spacing);
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12),
+    0 1px 2px rgba(255, 255, 255, 0.24);
+  padding: var(--spacing);
+  color: black;
+}
+
+div#container div.aaruush-contact-us .tile img {
+  border-radius: 50%;
+  height: 240px;
+  width: 240px;
+  padding: calc(var(--spacing)) var(--spacing);
+}
+
+div#container div.aaruush-contact-us .tile h2 {
+  font-weight: 600;
+}
+
+div#container div.aaruush-contact-us .tile h3 {
+  margin-bottom: var(--spacing);
+  font-weight: 400;
+}
+
+div#container div.aaruush-contact-us .tile div.button-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+div#container div.aaruush-contact-us .tile div.button-row a {
+  color: #f06830;
+  text-decoration: none;
+}
+
+div#container div.aaruush-contact-us .tile div.button-row a span {
+}
+
+#aaruush-logo,
+#team-envision-logo {
+  width: calc(var(--spacing) * 14);
+  height: auto;
+  position: absolute;
+  right: var(--spacing);
+}
+
+#aaruush-logo {
+  top: var(--spacing);
+}
+
+#team-envision-logo {
+  bottom: var(--spacing);
+}
+
+@media only screen and (max-width: 900px) {
+  div#container {
+    padding-top: calc(var(--spacing) * 5);
+  }
+
+  #aaruush-logo,
+  #team-envision-logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  div#container div.aaruush-contact-us {
+    flex-direction: column;
+  }
+  div#container div.aaruush-contact-us .tile:last-child {
+    margin-bottom: 8rem;
+  }
+}

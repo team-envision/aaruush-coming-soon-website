@@ -175,6 +175,17 @@ canvas#noise-screen {
   bottom: var(--spacing);
 }
 
+a.aaruush-contact-us {
+  position: absolute;
+  left: 50%;
+  bottom: var(--spacing);
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-family: "Segoe Mono", monospace;
+  color: inherit;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
