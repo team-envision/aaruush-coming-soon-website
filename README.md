@@ -2,7 +2,7 @@
 
 <div align="center">
   <img alt="Aaruush Logo" src="https://raw.githubusercontent.com/team-envision/aaruush-coming-soon-website/master/static/img/aaruush_black.png" height="60" />
-</div>_
+</div>
 <p align="center"><code>Coming soon</code></p>
 
 <div align="center">
